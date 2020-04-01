@@ -152,6 +152,8 @@ jobs:
 
     - name: Gather executables
       run: |
+        mkdir tmp
+        cd tmp
         mkdir hledger
         cd hledger
         copy C:\Users\runneradmin\AppData\Roaming\local\bin\hledger.exe .
@@ -161,4 +163,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: hledger
-        path: hledger
+        path: tmp/hledger
